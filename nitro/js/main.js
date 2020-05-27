@@ -309,7 +309,7 @@ jQuery(document).ready(function ($) {
 	// navigation
 	var OnePageNavigation = function () {
 		var navToggler = $('.site-menu-toggle');
-		$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function (e) {
+		$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a, .site-mobile-menu .site-nav-wrap li ul li ul li a[href^='#']", function (e) {
 			e.preventDefault();
 
 			var hash = this.hash;
@@ -411,8 +411,3 @@ $(document).ready(function () {
 		});
 	});
 });
-
-$(document).ready(function () {
-	$('#mc_embed_signup').find('form').ajaxChimp();
-});
-
