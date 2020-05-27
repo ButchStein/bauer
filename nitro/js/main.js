@@ -164,12 +164,31 @@ jQuery(document).ready(function($) {
 	    center: false,
 	    items: 1,
 	    loop: true,
-			stagePadding: 0,
-	    margin: 0,
+			stagePadding: 20,
+	    margin: 10,
 	    autoplay: true,
-	    pauseOnHover: false,
+	    pauseOnHover: true,
 	    nav: true,
-	    navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">']
+		navText: ['<span class="icon-keyboard_arrow_left">', '<span class="icon-keyboard_arrow_right">'],
+		responsive:{
+	        600:{
+	        	margin: 5,
+	        	nav: true,
+	          items: 2
+	        },
+	        1000:{
+	        	margin: 10,
+	        	stagePadding: 0,
+	        	nav: true,
+	          items: 3
+	        },
+	        1200:{
+	        	margin: 0,
+	        	stagePadding: 0,
+	        	nav: true,
+	          items: 4
+	        }
+		    }
 	  });
 
 	  // $('.slide-one-item-alt').owlCarousel({
