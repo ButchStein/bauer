@@ -27,4 +27,26 @@ if (@mail($to, $email, $tel, $message, $headers)) {
 	echo "Ваше сообщение успешно отправлено!";
 } else {
 	echo 'Ошибка отправки';
+}?>
+<?php
+$to = 'butchbs1982@gmail.com';
+$subject = 'Письмо с сайта bau-imperial.ru';
+$firstname = $_POST['fname'];
+$lastname = $_POST['lname'];
+$tel = $_POST['tel'];
+$email = $_POST['email'];
+$text = $_POST['message'];
+
+$headers = array(
+    'From' => $email,
+    'Reply-To' => $email,
+    'X-Mailer' => 'PHP/' . phpversion());
+$messagebody = wordwrap($text, 70, "\r\n");
+$message = 'От: ' . $firstname .' '. $lastname."\r\n" .
+           'Телефон: ' . $tel . "\r\n" .
+           'Текст сообщения: ' . $messagebody;
+if (@mail($to, $subject, $message, $headers)) {
+	echo "Ваше сообщение успешно отправлено!";
+} else {
+	echo 'Ошибка отправки';
 }
