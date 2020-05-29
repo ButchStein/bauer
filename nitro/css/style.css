@@ -900,6 +900,8 @@ body:after {
 
 @media (max-width: 991.98px) {
   .circle-bg:after {
+    width: 250px;
+    height: 250px;
     bottom: 0px;
     right: -90px;
   }
